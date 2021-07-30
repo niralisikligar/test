@@ -1,0 +1,109 @@
+import React from 'react'
+import MuiTreeView from 'material-ui-treeview';
+
+const tree = [
+    {
+        "id":1,
+        "name":"Raj",
+        "parent_id":0,
+        "children":[
+            {
+                "id":2,
+                "name":"Ajay",
+                "parent_id":1,
+                "children":[
+                    {
+                        "id":3,
+                        "name":"Neel",
+                        "parent_id":2,
+                        "children":[
+                            {
+                                "id":4,
+                                "name":"pankaj",
+                                "parent_id":3
+                            }
+                        ]
+                    },
+                    {
+                        "id":5,
+                        "name":"Priyanka",
+                        "parent_id":2
+                    }
+                ]
+            },
+            {
+                "id":6,
+                "name":"Prince",
+                "parent_id":1
+            },
+            {
+                "id":7,
+                "name":"Mayank",
+                "parent_id":1,
+                "children":[
+                    {
+                        "id":8,
+                        "name":"nirav",
+                        "parent_id":7,
+                        "children":[
+                            {
+                                "id":9,
+                                "name":"dhaval",
+                                "parent_id":8
+                            }
+                        ]
+                    },
+                    {
+                        "id":10,
+                        "name":"Meera",
+                        "parent_id":7
+                    }
+                ]
+            },
+            {
+                "id":11,
+                "name":"Virat",
+                "parent_id":1
+            }
+        ]
+    },
+    {
+        "id":12,
+        "name":"Vijay",
+        "parent_id":0
+    },
+    {
+        "id":13,
+        "name":"Nilesh",
+        "parent_id":0,
+        "children":[
+            {
+                "id":14,
+                "name":"darshan",
+                "parent_id":13,
+                "children":[
+                    {
+                        "id":15,
+                        "name":"ved",
+                        "parent_id":14
+                    }
+                ]
+            },
+            {
+                "id":16,
+                "name":"jolit",
+                "parent_id":13
+            }
+        ]
+    }
+  ];
+
+const Tree = () => {
+    return (
+        <>
+             <MuiTreeView tree={tree} /> 
+        </>
+    )
+}
+
+export default Tree
